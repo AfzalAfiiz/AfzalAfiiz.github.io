@@ -21,6 +21,176 @@
 		<meta property="og:type" content="website" />
 
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<style>
+			/* Portfolio visual polish overrides */
+			body {
+				background: #f4f7fb;
+				color: #4d5966;
+				line-height: 1.65;
+				letter-spacing: 0.01em;
+			}
+
+			body, input, select, textarea {
+				color: #4d5966;
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				color: #172033;
+				font-weight: 700;
+				letter-spacing: -0.02em;
+			}
+
+			p {
+				margin: 0 0 1.05em 0;
+				line-height: 1.7;
+			}
+
+			a {
+				color: #1f9bd1;
+			}
+
+			a:hover {
+				color: #12c2a6 !important;
+			}
+
+			#header {
+				background: linear-gradient(160deg, rgba(10, 18, 32, 0.96), rgba(12, 74, 110, 0.92)), url("images/bg.jpg");
+				background-size: cover;
+				background-position: center;
+				color: #d8e6ef;
+			}
+
+			#header h1,
+			#header h2,
+			#header strong {
+				color: #ffffff;
+			}
+
+			#header p {
+				line-height: 1.55;
+			}
+
+			#main {
+				background: #ffffff;
+			}
+
+			section {
+				padding-top: 3.5em;
+				padding-bottom: 2.75em;
+			}
+
+			header.major h2 {
+				color: #102033;
+				margin-bottom: 0.45em;
+			}
+
+			header.major p {
+				color: #687789;
+				font-size: 1em;
+				line-height: 1.65;
+				margin-bottom: 1.8em;
+			}
+
+			.work-item {
+				background: #ffffff;
+				border: 1px solid #e3eaf2;
+				border-radius: 14px;
+				box-shadow: 0 10px 28px rgba(16, 32, 51, 0.06);
+				margin-bottom: 2em;
+				padding: 1.1em;
+				transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+			}
+
+			.work-item:hover {
+				border-color: #b8e6f3;
+				box-shadow: 0 16px 36px rgba(16, 32, 51, 0.1);
+				transform: translateY(-3px);
+			}
+
+			.work-item h3 {
+				color: #0f2742;
+				font-size: 1.08em;
+				margin: 0.75em 0 0.55em 0;
+			}
+
+			.work-item p {
+				color: #5b6675;
+				font-size: 0.94em;
+				line-height: 1.62;
+				margin-bottom: 0.72em;
+			}
+
+			.work-item strong {
+				color: #17324d;
+			}
+
+			.stat-grid {
+				display: grid;
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				gap: 1em;
+				margin: 1.75em 0 0.75em 0;
+			}
+
+			.stat-card {
+				background: linear-gradient(145deg, #f7fbff, #eef7fb);
+				border: 1px solid #dcecf5;
+				border-radius: 14px;
+				padding: 1.1em;
+				text-align: center;
+			}
+
+			.stat-card strong {
+				display: block;
+				color: #0e7aa5;
+				font-size: 1.65em;
+				line-height: 1.1;
+			}
+
+			.stat-card span {
+				color: #536273;
+				font-size: 0.86em;
+				line-height: 1.35;
+			}
+
+			.tag-list {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.55em;
+				margin-top: 1em;
+			}
+
+			.tag-list span {
+				background: #e9f7fb;
+				border: 1px solid #cdebf5;
+				border-radius: 999px;
+				color: #0d6f93;
+				font-size: 0.82em;
+				font-weight: 600;
+				padding: 0.35em 0.75em;
+			}
+
+			.button {
+				box-shadow: inset 0 0 0 2px #1f9bd1;
+				color: #1f9bd1 !important;
+			}
+
+			.button:hover {
+				background: #1f9bd1;
+				color: #ffffff !important;
+			}
+
+			@media screen and (max-width: 736px) {
+				.stat-grid {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+				}
+
+				section {
+					padding-top: 2.5em;
+					padding-bottom: 2em;
+				}
+			}
+		</style>
 	</head>
 
 	<body class="is-preload">
@@ -48,11 +218,12 @@
 					Building Unity-based interactive systems for live events, brand activations, AI-powered experiences, XR applications, robotics-integrated installations, and creative technology projects across UAE and GCC markets.
 				</p>
 
-				<div style="font-size: 0.78em; color: #ffffff; line-height: 1.8; margin-top: 1em;">
+				<div style="font-size: 0.8em; color: #ffffff; line-height: 1.75; margin-top: 1em;">
 					<p style="margin: 0;"><strong>250+</strong> Event & Activation Projects</p>
 					<p style="margin: 0;"><strong>20+</strong> Photobooth / AI Photobooth Experiences</p>
+					<p style="margin: 0;"><strong>15+</strong> Sensor-Based Applications</p>
 					<p style="margin: 0;"><strong>7+</strong> Robotic Activation Systems</p>
-					<p style="margin: 0;">UAE | Saudi Arabia | Qatar | GCC</p>
+					<p style="margin: 0; color: #bfe8f5;">UAE | Saudi Arabia | Qatar | GCC</p>
 				</div>
 			</div>
 
@@ -92,6 +263,25 @@
 				<p>
 					I have contributed to 250+ event and brand activation projects across UAE, Saudi Arabia, Qatar, and GCC markets, including AI photobooths, AI artist systems, Glambot, robotic games, VR experiences, interactive mirrors, gesture tracking installations, LED/video wall control, sliding screen systems, and multimedia show-control applications.
 				</p>
+
+				<div class="stat-grid">
+					<div class="stat-card">
+						<strong>250+</strong>
+						<span>Event & Activation Projects</span>
+					</div>
+					<div class="stat-card">
+						<strong>20+</strong>
+						<span>Photobooth / AI Systems</span>
+					</div>
+					<div class="stat-card">
+						<strong>15+</strong>
+						<span>Sensor-Based Applications</span>
+					</div>
+					<div class="stat-card">
+						<strong>7+</strong>
+						<span>Robotics Activations</span>
+					</div>
+				</div>
 			</section>
 
 			<!-- Expertise -->
@@ -571,3 +761,6 @@
 
 	</body>
 </html>
+
+
+can edit this
